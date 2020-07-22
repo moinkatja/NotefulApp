@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import config from '../config';
 import ApiContext from '../ApiContext';
 import classes from './AddNote.module.css';
+import PropTypes from 'prop-types';
 
 class AddNote extends Component {
     constructor(props) {
@@ -120,5 +121,13 @@ class AddNote extends Component {
 }
 
 AddNote.contextType = ApiContext;
+
+AddNote.propTypes = {
+    name: PropTypes.string,
+    modified: PropTypes.instanceOf(Date),
+    content: PropTypes.string,
+    folderId: PropTypes.string
+}
+
 
 export default AddNote;
