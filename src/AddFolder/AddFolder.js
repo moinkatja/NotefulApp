@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import config from '../config';
 import ApiContext from '../ApiContext';
 import classes from "./AddFolder.module.css";
+import PropTypes from 'prop-types';
 
 class AddFolder extends Component {
 
@@ -72,6 +73,10 @@ class AddFolder extends Component {
             </div>
         )
     }
+}
+
+AddFolder.propTypes = {
+    name: PropTypes.string,
 }
 
 AddFolder.contextType = ApiContext
