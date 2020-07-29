@@ -3,17 +3,13 @@ import config from '../config';
 import ApiContext from '../ApiContext';
 import classes from "./AddFolder.module.css";
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 import ValidationError from "../ValidationError/ValidationError";
-=======
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
 
 class AddFolder extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-<<<<<<< HEAD
             name: {
                 value: "",
                 touched: false,
@@ -24,16 +20,6 @@ class AddFolder extends Component {
     nameChanged(name) {
         this.setState({ name: { value: name, touched: true } });
 
-=======
-            name: "",
-        };
-    }
-
-    nameChanged(name) {
-        this.setState({
-            name
-        });
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
     }
 
     handleAddFolder = (e) => {
@@ -68,7 +54,6 @@ class AddFolder extends Component {
             });
     }
 
-<<<<<<< HEAD
     validateName() {
         const valid= /[^a-zA-Z0-9]/g;
 
@@ -84,8 +69,6 @@ class AddFolder extends Component {
         }
     }
 
-=======
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
     render() {
 
         const error = this.state.error
@@ -96,7 +79,6 @@ class AddFolder extends Component {
                 {error}
                 <form onSubmit={e => this.handleAddFolder(e)}>
                     <input
-<<<<<<< HEAD
                         className={classes.FolderInput}
                         type="text"
                         id="folder-name"
@@ -109,16 +91,6 @@ class AddFolder extends Component {
                     )}
                     <button className={classes.AddButton} type="submit" disabled={
                         this.validateName()}>ADD</button>
-=======
-                    className={classes.FolderInput}
-                        type="text"
-                        id="folder-name"
-                        value={this.state.name}
-                        placeholder="Enter the name of folder"
-                        onChange={e => this.nameChanged(e.target.value)}
-                        required />
-                    <button className={classes.AddButton} type="submit">ADD</button>
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
                 </form>
             </div>
         )
