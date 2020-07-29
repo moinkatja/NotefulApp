@@ -42,9 +42,12 @@ form {
 
 .AddButton:hover {
     background-color: #FFB72F;
+<<<<<<< HEAD
 }
 
 .AddButton:disabled {
     cursor: not-allowed;
     background-color: #ccc;
+=======
+>>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
 }
