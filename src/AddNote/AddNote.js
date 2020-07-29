@@ -3,16 +3,12 @@ import config from '../config';
 import ApiContext from '../ApiContext';
 import classes from './AddNote.module.css';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 import ValidationError from "../ValidationError/ValidationError";
-=======
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
 
 class AddNote extends Component {
     constructor(props) {
         super(props);
         this.state = {
-<<<<<<< HEAD
             name: {
                 value: "",
                 touched: false,
@@ -29,34 +25,16 @@ class AddNote extends Component {
                 value: "",
                 touched: false,
             },
-=======
-            name: "",
-            modified: "",
-            content: "",
-            folderId: ""
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
         };
     }
 
     nameChanged(name) {
-<<<<<<< HEAD
         this.setState({ name: { value: name, touched: true } });
 
     }
 
     contentChanged(content) {
         this.setState({ content: { value: content, touched: true } });
-=======
-        this.setState({
-            name
-        });
-    }
-
-    contentChanged(content) {
-        this.setState({
-            content
-        });
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
     }
 
     folderChanged(folderId) {
@@ -86,10 +64,6 @@ class AddNote extends Component {
             modified: new Date()
         }
         console.log(note);
-<<<<<<< HEAD
-
-=======
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
         fetch(`${config.API_ENDPOINT}/notes`, {
             method: 'POST',
             headers: {
@@ -115,7 +89,6 @@ class AddNote extends Component {
             });
     }
 
-<<<<<<< HEAD
     validateName() {
         const name = this.state.name.value.trim();
         if (name.length === 0) {
@@ -137,8 +110,6 @@ class AddNote extends Component {
     }
 
 
-=======
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
     render() {
         const error = this.state.error
             ? <div>{this.state.error}</div> : "";
@@ -150,7 +121,6 @@ class AddNote extends Component {
                     <input
                         type="text"
                         id="note-name"
-<<<<<<< HEAD
                         value={this.state.name.value}
                         placeholder="Enter the title of your note"
                         onChange={e => this.nameChanged(e.target.value)}
@@ -183,32 +153,6 @@ class AddNote extends Component {
                     </div>
                     <button className={classes.AddButton} type="submit" disabled={
                         this.validateName() ||  this.validateContent() }>ADD</button>
-=======
-                        value={this.state.name}
-                        placeholder="Enter the title of your note"
-                        onChange={e => this.nameChanged(e.target.value)}
-                        required />
-                    <textarea
-                        type="text"
-                        id="note-content"
-                        value={this.state.content}
-                        placeholder="Enter the content"
-                        onChange={e => this.contentChanged(e.target.value)}
-                        required />
-                    <label>Select the folder</label>
-                    <div className={classes.CustomSelect}>
-                    <select
-                        id="folderId"
-                        name="note-folder"
-                        value={this.state.folderId}
-                        onChange={e => this.folderChanged(e.target.value)}
-                    >
-                        {this.selectFolder()}
-
-                    </select>
-                    </div>
-                    <button className={classes.AddButton} type="submit">ADD</button>
->>>>>>> 0330a561bc6e4c5c0ea5f03b15f36d2a131eb3e7
                 </form>
             </div>
         )
