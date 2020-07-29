@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+.FormFolder {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.FolderInput {
+    display: flex;
+    height: 30px;
+    font-size: 15px;
+    width: 300px;
+    align-self: center;
+}
+
+
+
+.AddButton {
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color: #041a3a;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    margin-top: 10px;
+    width: 300px;
+    align-self: center;
+}
+
+.AddButton:hover {
+    background-color: #FFB72F;
+}
+
+.AddButton:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
